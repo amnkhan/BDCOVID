@@ -1,0 +1,196 @@
+/* Hind Shiliguri Bangla Font */
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,500,600&display=swap');
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 18px;
+    color: #333;
+    background-color: #f4f8fb;
+}
+
+.header-section a.navbar-brand {
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 20px;
+}
+.header-section a.navbar-brand:hover {
+    color: rgba(26, 26, 26, 0.6);
+}
+.header-section .navbar-nav {
+    background: #ffffff;
+    padding: 10px;
+}
+.header-section {
+    padding: 10px 0;
+}
+.header-section .navbar-nav .nav-link:last-child {
+    padding-right: 0;
+}
+.navbar-light .navbar-nav .nav-link i {
+    margin-right: 10px;
+}
+
+/* Numbers section */
+.current-numbers-section {
+    padding: 20px 0;
+}
+.current-numbers-section .single-card {
+    text-align: center;
+    padding: 20px 5px;
+    border-radius: 4px;
+    border: 0;
+    margin-bottom: 25px;
+    color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+}
+
+.current-numbers-section .single-card h2 {
+    font-size: 12px;
+}
+
+.current-numbers-section .single-card h1 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.current-numbers-section .effected {
+    background-image: linear-gradient( 267deg, #b37bec, #7f5fce);
+}
+.current-numbers-section .dead {
+    background-image: linear-gradient( 267deg, #ff7584, #f11771);
+}
+.current-numbers-section .recovered {
+    background-image: linear-gradient( 267deg, #28f387, #0abf54);
+}
+.current-numbers-section .under-treatment {
+    background-image: linear-gradient( 267deg, #f8c345, #e1ab0a);
+}
+/* Map Section */
+.bd-map-section {
+    padding: 20px 0;
+}
+.section-tittle {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.map {
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .header-section {
+        padding: 20px 0;
+    }
+    /* Numbers */
+    .current-numbers-section {
+        padding: 30px 0;
+    }
+    .current-numbers-section .single-card {
+        padding: 28px 10px;
+    }
+    .current-numbers-section .single-card h2 {
+        font-size: 18px;
+    }
+    .current-numbers-section .single-card h1 {
+        font-size: 46px;
+        margin-bottom: 0;
+    }
+    .section-tittle {
+        font-size: 24px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .header-section .navbar-nav {
+        background: none;
+        padding: 0px;
+    }
+    .header-section .navbar-nav .nav-link {
+        color: rgba(26, 26, 26, 0.6);
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .header-section .navbar-nav .nav-link i {
+        margin-right: 5px;
+    }
+    .header-section .navbar-nav .active {
+        position: #1a1a1a;
+    }
+    /* Numbers */
+    .current-numbers-section .single-card {
+        padding: 26px 10px;
+    }
+    .current-numbers-section .single-card h2 {
+        font-size: 16px;
+    }
+    .current-numbers-section .single-card h1 {
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+    .section-tittle {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+    /* Map */
+    .map {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .header-section a.navbar-brand {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .header-section .navbar-nav .nav-link {
+        padding: 0 10px;
+        font-size: 18px;
+    }
+    /* Numbers */
+    .current-numbers-section {
+        padding: 40px 0;
+    }
+    .current-numbers-section .single-card {
+        padding: 38px 10px;
+    }
+    .current-numbers-section .single-card h2 {
+        font-size: 22px;
+    }
+    .current-numbers-section .single-card h1 {
+        font-size: 52px;
+        margin-bottom: 0;
+    }
+    .section-tittle {
+        font-size: 32px;
+    }
+    /* Map */
+    .map {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .header-section a.navbar-brand {
+        font-size: 28px;
+    }
+    .header-section .navbar-nav .nav-link {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+    /* Map */
+    .map {
+        width: 100%;
+        height: 500px;
+    }
+}

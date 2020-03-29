@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Language" content="bn">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Leaflet JS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script> -->
+    <!-- MapBox Files -->
+    <script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.css">
+    <link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f08dc14b37.js" crossorigin="anonymous"></script>
+
+    <title>BD Covid19</title>
+</head>
+<body>
+    
+    <!-- Navigation Section -->
+    <header  class="header-section">
+        <!-- navbar section starts -->
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container">
+                <!-- Brand/logo -->
+                <a class="navbar-brand" href="#">বিডি কোভিড-১৯</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Links -->
+                <ul class="navbar-nav ml-auto">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="#"><i class="fas fa-home"></i> হোম <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="#"><i class="fas fa-info-circle"></i> আমাদের সম্পর্কে</a>
+                        <a class="nav-item nav-link" href="#"><i class="fas fa-chart-line"></i> এক্সপোনেন্সিয়াল গ্রোথ</a>
+                        <a class="nav-item nav-link" href="#"><i class="fas fa-medkit"></i> জরুরী সহায়তা</a>
+                    </div>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar section ends -->
+    </header>
+    <!-- Navigation Section ends -->
+
+    <!-- current numbers section -->
+    <section class="current-numbers-section">
+        <div class="container">
+            <div class="row">
+                <!-- single number widget -->
+                <div class="col-md-3 col-6">
+                    <div class="single-card effected">
+                        <h2>মোট আক্রান্ত</h2>
+                        <h1>৩৯</h1>
+                    </div>
+                </div>
+                <!-- single number widget ends -->
+                
+                <!-- single number widget -->
+                <div class="col-md-3 col-6">
+                    <div class="single-card dead">
+                        <h2>মোট মৃত্যু</h2>
+                        <h1>০৪</h1>
+                    </div>
+                </div>
+                <!-- single number widget ends -->
+
+                <!-- single number widget -->
+                <div class="col-md-3 col-6">
+                    <div class="single-card recovered">
+                        <h2>মোট সুস্থ হয়েছেন</h2>
+                        <h1>০৫</h1>
+                    </div>
+                </div>
+                <!-- single number widget ends -->
+
+                <!-- single number widget -->
+                <div class="col-md-3 col-6">
+                    <div class="single-card under-treatment">
+                        <h2>চিকিৎসাধীন আছেন</h2>
+                        <h1>৩০</h1>
+                    </div>
+                </div>
+                <!-- single number widget ends -->
+            </div>
+        </div>
+    </section>
+    <!-- current numbers section ends -->
+
+    <!-- map section -->
+    <section class="bd-map-section">
+        <div class="container">
+            <div class="row">
+                <!-- Section title -->
+                <div class="col-12">
+                    <h1 class="section-tittle">যে সকল জেলায় কোভিড-১৯ সনাক্ত হয়েছে</h1>
+                </div>
+                <div class="col-12">
+                    <div class="map" id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- map section ends -->
+
+    <!-- jQuery JS -->
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- map js -->
+    <script src="js/map.js"></script>
+    <!-- main script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
