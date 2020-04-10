@@ -74,14 +74,64 @@ body {
 .section-tittle {
     font-size: 20px;
     line-height: 1.4;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+.section-subtitle {
+    font-size: 16px;
 }
 .map {
     width: 100%;
-    height: 300px;
+    height: 400px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
-
+.bd-map-section p span{
+    display: inline-block;
+}
+.bd-map-section p span.severe i {
+    color: #800026;
+}
+.bd-map-section p span.mildly-severe i {
+    color: #FC4E2A;
+}
+.bd-map-section p span.mildly-severe i {
+    color: #FD8D3C;
+}
+.bd-map-section p span.mild i {
+    color: #FEB24C;
+}
+.bd-map-section p span.light i {
+    color: #FED976;
+}
+.bd-map-section p span.started i {
+    color: #FFEDA0;
+}
+.bd-map-section .info.leaflet-control h4 {
+    font-size: 10px;
+}
+  .info { 
+    padding: 6px 8px; 
+    font: 14px/16px Arial, Helvetica, sans-serif; 
+    background: white; 
+    background: rgba(255,255,255,0.8); 
+    box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+    border-radius: 5px; 
+  } 
+  
+  .info h4 { margin: 0 0 5px; color: #777; }
+  
+  .legend { 
+    text-align: left; 
+    line-height: 18px; 
+    color: #555; 
+  } 
+  
+  .legend i { 
+    width: 18px; 
+    height: 18px; 
+    float: left; 
+    margin-right:8px; 
+    opacity: 0.7; 
+  }
 /* Article Section */
 .article-section {
     padding: 30px 0;
@@ -168,6 +218,9 @@ body {
     .section-tittle {
         font-size: 24px;
     }
+    .section-subtitle {
+        font-size: 18px;
+    }
 }
 
 /* // Medium devices (tablets, 768px and up) */
@@ -200,13 +253,14 @@ body {
     }
     .section-tittle {
         font-size: 26px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     /* Map */
     .map {
         width: 100%;
         height: 350px;
     }
+    
     /* Article */
     .article-section .article-heading {
         font-size: 44px;
@@ -257,11 +311,19 @@ body {
     }
     .section-tittle {
         font-size: 32px;
+        margin-bottom: 15px;
+    }
+    .section-subtitle {
+        font-size: 20px;
     }
     /* Map */
     .map {
         width: 100%;
         height: 400px;
+        margin-top: 20px;
+    }
+    .bd-map-section .info.leaflet-control h4 {
+        font-size: 18px;
     }
     /* Article */
     .article-section .single-article {
