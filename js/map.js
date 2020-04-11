@@ -9,18 +9,29 @@ $.ajax({
   }
 });
 var mapboxAccessToken = "pk.eyJ1IjoiYW1ua2hhbiIsImEiOiJjazg3ZzJpdmswNXp4M2dxdnR5NnM2b3V5In0.sDPqIb4yM4CSY8mzsDaX8w";
-var map = L.map('map').setView([23.8103, 90.4125], 6);
+var map = L.map('map').setView([23.6850, 90.3563], 6);
 
 //https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 //c
-
-//https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
-  attribution: '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors data ©️ IEDCR and built with ❤️ and maintained by Al-Iqram Elahee Hridoy & Al Amin Khan',
-  id: 'mapbox/light-v9',
-   maxZoom: 18,
-  minZoom:7
-}).addTo(map);
+function responsiveMap(x) {
+  if (x.matches) { // If media query matches
+      //https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors data ©️ IEDCR and built with ❤️ and maintained by Al-Iqram Elahee Hridoy & Al Amin Khan',
+      id: 'mapbox/light-v9',
+      maxZoom: 18,
+      minZoom: 7
+    }).addTo(map);
+  } else {
+    //https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
+      attribution: '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors data ©️ IEDCR and built with ❤️ and maintained by Al-Iqram Elahee Hridoy & Al Amin Khan',
+      id: 'mapbox/light-v9',
+      maxZoom: 18,
+      minZoom: 6
+    }).addTo(map);
+  }
+}
 
 // control that shows state info on hover
 var info = L.control();
@@ -117,8 +128,15 @@ legend.onAdd = function (map) {
 };
 
 legend.addTo(map);
-})();
 
+
+
+
+var x = window.matchMedia("(min-width: 992px)")
+responsiveMap(x) // Call listener function at run time
+x.addListener(responsiveMap) // Attach listener function on state changes
+
+})();
 
 
 

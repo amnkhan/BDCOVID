@@ -72,7 +72,7 @@ a {
 }
 /* Map Section */
 .bd-map-section {
-    padding: 20px 0;
+    padding: 10px 0;
 }
 .section-tittle {
     font-size: 20px;
@@ -85,6 +85,7 @@ a {
 .map {
     width: 100%;
     height: 400px;
+    margin-bottom: 20px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 .dhakaMap {
@@ -229,6 +230,10 @@ a {
     .section-subtitle {
         font-size: 18px;
     }
+    /* Map */
+    .map {
+        height: 400px;
+    }
 }
 
 /* // Medium devices (tablets, 768px and up) */
@@ -305,7 +310,7 @@ a {
     }
     /* Numbers */
     .current-numbers-section {
-        padding: 40px 0;
+        padding: 30px 0;
     }
     .current-numbers-section .single-card {
         padding: 38px 10px;
@@ -327,8 +332,8 @@ a {
     /* Map */
     .map {
         width: 100%;
-        height: 400px;
-        margin-top: 10px;
+        height: 600px;
+        margin-bottom: 30px;
     }
     .bd-map-section .info.leaflet-control h4 {
         font-size: 18px;
@@ -353,10 +358,5 @@ a {
     .header-section .navbar-nav .nav-link {
         font-size: 20px;
         padding: 0 15px;
-    }
-    /* Map */
-    .map {
-        width: 100%;
-        height: 500px;
     }
 }
