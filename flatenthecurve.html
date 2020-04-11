@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- Leaflet JS -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script> -->
-    <!-- MapBox Files -->
-    <script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.css">
-    <link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
+    
+    <!-- Map Files -->
+    <link rel="stylesheet" href="css/leaflet1.2.css">
+    <link rel="stylesheet" href="css/Markercluster1.2.css">
+    <link rel="stylesheet" href="css/Markercluster1.2.default.css">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css">
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f08dc14b37.js" crossorigin="anonymous"></script>
 
@@ -38,9 +39,9 @@
                 <!-- Links -->
                 <ul class="navbar-nav ml-auto">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="index.html"><i class="fas fa-home"></i> হোম <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="index.html"><i class="fas fa-home"></i> হোম <span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link" href="#"><i class="fas fa-info-circle"></i> আমাদের সম্পর্কে</a>
-                        <a class="nav-item nav-link" href="flatenthecurve.html"><i class="fas fa-chart-line"></i> ভাইরাস নিয়ন্ত্রন</a>
+                        <a class="nav-item nav-link active" href="flatenthecurve.html"><i class="fas fa-chart-line"></i> ভাইরাস নিয়ন্ত্রন</a>
                         <a class="nav-item nav-link" href="#"><i class="fas fa-medkit"></i> জরুরী সহায়তা</a>
                     </div>
                 </ul>
@@ -111,11 +112,18 @@
     <!-- Artocle section ends -->
 
     <!-- jQuery JS -->
-    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Counter Up -->
+    <script src="js/waypoint.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
     <!-- map js -->
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet.markercluster.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js"></script>
+    
     <script src="js/map.js"></script>
     <!-- main script -->
     <script src="js/script.js"></script>
