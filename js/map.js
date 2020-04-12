@@ -50,14 +50,14 @@ info.update = function (props) {
 info.addTo(map);
 
 function getColor(d) {
-  return  d > 50 ? '#800026' :
+  return  d > 50 ? '#9E0000' :
   // d > 40  ? '#BD0026' :
   // d > 30  ? '#E31A1C' :
-  d > 20  ? '#FC4E2A' :
-  d > 10   ? '#FD8D3C' :
-  d > 5   ? '#FEB24C' :
-  d > 0   ? '#FED976' :
-  '#FFEDA0';
+  d > 20  ? '#FF0000' :
+  d > 10   ? '#F64747' :
+  d > 5   ? '#FF6464' :
+  d > 0   ? '#F98F8F' :
+  '#F98F8F';
 }
 
 function style(feature) {

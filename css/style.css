@@ -105,22 +105,19 @@ a {
     display: inline-block;
 }
 .bd-map-section p span.severe i {
-    color: #800026;
+    color: #9E0000;
 }
 .bd-map-section p span.mildly-severe i {
-    color: #FC4E2A;
+    color: #FF0000;
 }
 .bd-map-section p span.mildly-severe i {
-    color: #FD8D3C;
+    color: #F64747;
 }
 .bd-map-section p span.mild i {
-    color: #FEB24C;
+    color: #FF6464;
 }
 .bd-map-section p span.light i {
-    color: #FED976;
-}
-.bd-map-section p span.started i {
-    color: #FFEDA0;
+    color: #F98F8F;
 }
 .bd-map-section .info.leaflet-control h4 {
     font-size: 10px;
