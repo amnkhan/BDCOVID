@@ -153,8 +153,8 @@ var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 });
 
 var map = L.map('dhakaMap', {
-    center: L.latLng(23.8223, 90.3654),
-    zoom: 13,
+    center: L.latLng(23.8103, 90.4125),
+    zoom: 11,
     layers: [tiles]
 });
 
@@ -304,4 +304,3 @@ for (var i = 0; i < adressPoints.length; i++) {
 }
 
 map.addLayer(mcg);
-
