@@ -260,6 +260,27 @@ a {
 .chartCovid {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
+
+/* cta section */
+.cta-section {
+    padding: 50px 0;
+}
+
+.cta-wrapper {
+    padding: 30px;
+    
+}
+
+.cta-wrapper h2 {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.cta-wrapper .btn-cta {
+    margin-top: 25px;
+    margin-bottom: 0;
+    padding: 10px 20px;
+}
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     .header-section {
@@ -288,6 +309,12 @@ a {
     /* Map */
     .map {
         height: 400px;
+    }
+    .cta-wrapper {
+        padding: 50px 30px;
+    }
+    .cta-wrapper h2 {
+        font-size: 22px;
     }
 }
 
@@ -358,6 +385,15 @@ a {
     .chart-section .section-tittle {
         font-size: 22px;
         margin-bottom: 20px;
+    }
+    .cta-wrapper {
+        padding: 80px 50px;
+    }
+    .cta-wrapper h2 {
+        font-size: 28px;
+    }
+    .cta-wrapper .btn-cta {
+        font-size: 22px;
     }
 }
 
@@ -430,6 +466,12 @@ a {
     }
     .chart-section .spacing {
         margin-bottom: 80px;
+    }
+    .cta-wrapper h2 {
+        font-size: 32px;
+    }
+    .cta-wrapper {
+        padding: 80px 60px;
     }
 }
 
