@@ -1,0 +1,562 @@
+/* Hind Shiliguri Bangla Font */
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,500,600&display=swap');
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 18px;
+    color: #333;
+    background-color: #f4f8fb;
+}
+.js-plotly-plot .plotly, .js-plotly-plot .plotly div {
+    font-family:  'Roboto', sans-serif;
+}
+.table .phoneNumber a {
+    font-size: 16px;
+    color: #ff5959;
+    font-weight: 500;
+    font-family:  'Roboto', sans-serif;
+}
+.helpline-section {
+    padding: 40px 0;
+}
+a {
+    color: #0abf54;
+    text-decoration: none;
+}
+.header-section a.navbar-brand {
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 22px;
+}
+.header-section a.navbar-brand:hover {
+    color: rgba(26, 26, 26, 0.6);
+}
+.header-section .navbar-nav {
+    background: #ffffff;
+    padding: 10px;
+}
+.header-section {
+    padding: 10px 0;
+}
+.header-section .navbar-nav .nav-link:last-child {
+    padding-right: 0;
+}
+.navbar-light .navbar-nav .nav-link i {
+    margin-right: 10px;
+}
+.section-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+/* Numbers section */
+.current-numbers-section {
+    padding: 20px 0;
+}
+.current-numbers-section .single-card {
+    text-align: center;
+    padding: 20px 5px;
+    border-radius: 4px;
+    border: 0;
+    border: 1px solid rgb(241, 241, 241);
+    margin-bottom: 25px;
+    color: #333;
+    background: #fff;
+    box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+}
+
+.current-numbers-section .single-card h2 {
+    font-size: 12px;
+}
+
+.current-numbers-section .single-card h1 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-numbers-section .effected h1 {
+    
+    color: #7f5fce;
+}
+.current-numbers-section .dead h1 {
+    color: #f11771;
+}
+.current-numbers-section .recovered h1 {
+   color: #0abf54;
+}
+.current-numbers-section .under-treatment h1 {
+    color: #e1ab0a;
+}
+.current-numbers-section .effected {
+
+    border-bottom: 7px solid #7f5fce;
+}
+.current-numbers-section .dead {
+    border-bottom: 7px solid #f11771;
+}
+.current-numbers-section .recovered {
+   border-bottom: 7px solid #0abf54;
+}
+.current-numbers-section .under-treatment {
+    border-bottom: 7px solid #e1ab0a;
+}
+.current-numbers-section .d-time {
+    border-bottom: 7px solid #333;
+}
+.current-numbers-section .weekly-growth {
+    border-bottom: 7px solid #333;
+}
+.current-numbers-section .daily-growth {
+    border-bottom: 7px solid #333;
+}
+.current-numbers-section .single-card h1 span {
+   font-size: 24px;
+   padding: 0 2px;
+}
+/* Map Section */
+.bd-map-section {
+    padding: 20px 0;
+}
+.dhaka-map-section {
+    padding: 20px 0;
+}
+.section-tittle {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+.section-subtitle {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.map {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+}
+.dhakaMap {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+.bd-map-section p span{
+    display: inline-block;
+}
+.bd-map-section p span.severe i {
+    color: #9E0000;
+}
+.bd-map-section p span.mildly-severe i {
+    color: #FF0000;
+}
+.bd-map-section p span.mildly-severe i {
+    color: #F64747;
+}
+.bd-map-section p span.mild i {
+    color: #FF6464;
+}
+.bd-map-section p span.light i {
+    color: #F98F8F;
+}
+.bd-map-section p span.start i {
+    color: #F3CECE;
+}
+
+.bd-map-section .info.leaflet-control h4 {
+    font-size: 10px;
+}
+  .info { 
+    padding: 6px 8px; 
+    font: 14px/16px Arial, Helvetica, sans-serif; 
+    background: white; 
+    background: rgba(255,255,255,0.8); 
+    box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+    border-radius: 5px; 
+  } 
+  
+  .info h4 { margin: 0 0 5px; color: #777; }
+  
+  .legend { 
+    text-align: left; 
+    line-height: 18px; 
+    color: #555; 
+  } 
+  
+  .legend i { 
+    width: 18px; 
+    height: 18px; 
+    float: left; 
+    margin-right:8px; 
+    opacity: 0.7; 
+  }
+/* Article Section */
+.article-section {
+    padding: 30px 0;
+}
+.article-section .article-heading {
+    font-size: 22px;
+    line-height: 1.3;
+}
+.article-section .single-article {
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.single-article p {
+    font-size: 16px;
+}
+.single-article .healthy {
+    color: #538B94;
+    font-weight: 600;
+}
+.single-article .sick {
+    color: #9F4C00;
+    font-weight: 600;
+}
+.single-article .recovered {
+    color: #96418A;
+    font-weight: 600;
+}
+.single-article p span i {
+    font-size: 14px;
+}
+.single-article img {
+    margin-bottom: 15px;
+}
+.single-article a {
+    font-size: 16px;
+    color: #0abf54;
+    font-weight: 500;
+}
+.single-article .author i {
+    color: #0abf54;
+    margin-right: 5px;
+}
+
+.single-article .author {
+    font-weight: 500;
+}
+
+.single-article .author a {
+    color: #0abf54;
+    text-decoration: underline;
+    margin-right: 10px;
+}
+.single-article .notice {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.single-article .notice h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.single-article img {
+    width: 100%;
+}
+.single-article .notice p {margin-bottom: 0;}
+/* chart section */
+.chart-section {
+    padding: 50px 0;
+}
+.chart-section .section-tittle {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.chart-section .spacing {
+    margin-bottom: 50px;
+}
+.chartCovid {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* cta section */
+.cta-section {
+    padding: 50px 0;
+}
+
+.cta-wrapper {
+    padding: 30px;
+    
+}
+
+.cta-wrapper h2 {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.cta-wrapper .btn-cta {
+    margin-top: 25px;
+    margin-bottom: 0;
+    padding: 10px 20px;
+}
+/* footer section */
+.footer-section {
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.footer-section p {
+    font-size: 14px;
+}
+
+.footer-section p span {
+    color: #ff5959;
+}
+
+.footer-section p a {
+    text-decoration: none;
+    font-weight: 600;
+}
+/* SEIR Model */
+.seir-model-section {
+    padding: 30px 0;
+}
+
+.seir-model-wrapper h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.seir-model-wrapper p {
+    color: #333;
+    /* font-size: 26px; */
+}
+
+.seir-model-wrapper ul {
+    margin: 0;
+}
+
+.seir-model-wrapper h3 {
+    font-size: 22px;
+}
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .header-section {
+        padding: 20px 0;
+    }
+    /* Numbers */
+    .current-numbers-section {
+        padding: 30px 0;
+    }
+    .current-numbers-section .single-card {
+        padding: 28px 10px;
+    }
+    .current-numbers-section .single-card h2 {
+        font-size: 18px;
+    }
+    .current-numbers-section .single-card h1 {
+        font-size: 46px;
+        margin-bottom: 0;
+    }
+    .section-tittle {
+        font-size: 24px;
+    }
+    .section-subtitle {
+        font-size: 18px;
+    }
+    /* Map */
+    .map {
+        height: 400px;
+    }
+    .cta-wrapper {
+        padding: 50px 30px;
+    }
+    .cta-wrapper h2 {
+        font-size: 22px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .header-section .navbar-nav {
+        background: none;
+        padding: 0px;
+    }
+    .header-section .navbar-nav .nav-link {
+        color: rgba(26, 26, 26, 0.6);
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .header-section .navbar-nav .nav-link i {
+        margin-right: 5px;
+    }
+    .header-section .navbar-nav .active {
+        position: #1a1a1a;
+    }
+    /* Numbers */
+    .current-numbers-section .single-card {
+        padding: 26px 10px;
+    }
+    .current-numbers-section .single-card h2 {
+        font-size: 16px;
+    }
+    .current-numbers-section .single-card h1 {
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+    .section-tittle {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+    /* Map */
+    .map {
+        width: 100%;
+        height: 350px;
+    }
+    .dhakaMap {
+        height: 350px;
+    }
+    
+    /* Article */
+    .article-section .article-heading {
+        font-size: 44px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+    .article-section .single-article {
+        padding: 36px;
+    }
+    .single-article .author {
+        font-size: 22px;
+    }
+    .single-article .notice {
+        padding: 28px;
+        margin-bottom: 22px;
+    }
+    .single-article p {
+        font-size: 20px;
+    }
+    .single-article a {
+        font-size: 20px;
+    }
+    /* chart */
+    .chart-section .section-tittle {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .cta-wrapper {
+        padding: 80px 50px;
+    }
+    .cta-wrapper h2 {
+        font-size: 28px;
+    }
+    .cta-wrapper .btn-cta {
+        font-size: 22px;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .header-section a.navbar-brand {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .header-section .navbar-nav .nav-link {
+        padding: 0 10px;
+        font-size: 18px;
+    }
+    /* Numbers */
+    .current-numbers-section {
+        padding: 30px 0;
+    }
+    .current-numbers-section .single-card {
+        padding: 38px 10px;
+    }
+    .current-numbers-section .single-card h2 {
+        font-size: 22px;
+    }
+    .current-numbers-section .single-card h1 {
+        font-size: 52px;
+        margin-bottom: 0;
+    }
+    .section-tittle {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    .section-subtitle {
+        font-size: 20px;
+    }
+    /* Map */
+    .map {
+        width: 100%;
+        height: 600px;
+        margin-bottom: 30px;
+    }
+    .dhaka-map-section {
+        margin: 50px 0;
+    }
+    .dhaka-map-section .section-tittle {
+        margin-bottom: 20px;
+    }
+    .dhakaMap {
+        height: 500px;
+    }
+    .bd-map-section .info.leaflet-control h4 {
+        font-size: 18px;
+    }
+    /* Article */
+    .article-section .single-article {
+        padding: 40px;
+    }
+    .single-article img {
+        margin: 30px 0;
+    }
+    .single-article p {
+        font-size: 22px;
+    }
+    .current-numbers-section .single-card {
+        margin-bottom: 30px;
+    }
+    /* chart */
+    .chart-section .section-tittle {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+    .chart-section .spacing {
+        margin-bottom: 80px;
+    }
+    .cta-wrapper h2 {
+        font-size: 32px;
+    }
+    .cta-wrapper {
+        padding: 80px 60px;
+    }
+    .footer-section p {
+        font-size: 18px;
+    }
+    /* model section */
+    .seir-model-section {
+        padding: 60px 0;
+    }
+    .seir-model-wrapper h2 {
+        font-size: 32px;
+    }
+    .seir-model-wrapper h3 {
+        font-size: 24px;
+    }
+    .table .phoneNumber a {
+        font-size: 20px;
+    }
+    .helpline-section {
+        padding: 60px 0;
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .header-section a.navbar-brand {
+        font-size: 28px;
+    }
+    .header-section .navbar-nav .nav-link {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+}

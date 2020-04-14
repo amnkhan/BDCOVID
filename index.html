@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Language" content="bn">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Map Files -->
+    <link rel="stylesheet" href="css/leaflet1.2.css">
+    <link rel="stylesheet" href="css/Markercluster1.2.css">
+    <link rel="stylesheet" href="css/Markercluster1.2.default.css">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f08dc14b37.js" crossorigin="anonymous"></script>
+
+    <title>BD Covid - Bangladesh Corona Update</title>
+    <meta name="description" content="Bangladeshi Corona virus situation update, corona positive area heatmap, SEIR model for Bangladesh."/>
+    <meta name="keywords" content="COVID19, Coronavirus, Bangladesh, seir model, seir model bangladesh, bangldesh seir model, coronavirus seir model bangladesh">
+
+</head>
+<body>
+    
+    <!-- Navigation Section -->
+    <header  class="header-section">
+        <!-- navbar section starts -->
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container">
+                <!-- Brand/logo -->
+                <a class="navbar-brand" href="index.html">বিডি কোভিড</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Links -->
+                <ul class="navbar-nav ml-auto">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="index.html"><i class="fas fa-home"></i> হোম <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="model.html"><i class="fas fa-chart-line"></i> SEIR মডেল</a>
+                        <a class="nav-item nav-link" href="flatenthecurve.html"><i class="fas fa-virus"></i> ভাইরাস নিয়ন্ত্রন</a>
+                        <a class="nav-item nav-link" href="contact.html"><i class="fas fa-medkit"></i> জরুরী সহায়তা</a>
+                    </div>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar section ends -->
+    </header>
+    <!-- Navigation Section ends -->
+
+    <!-- current numbers section -->
+    <section class="current-numbers-section">
+        <div class="container">
+            <div class="row">
+                <!-- single number widget -->
+                <div class="col-md-3 col-6">
+                    <div class="single-card effected">
+                        <h2>মোট আক্রান্ত</h2>
+                        <h1 class="counter">1012</h1>
+                    </div>
+                </div>
+                <!-- single number widget ends -->
+                
+                <!-- single number widget -->
+                <div class="col-md-3 col-6">
+                    <div class="single-card dead">
+                        <h2>মোট মৃত্যু</h2>
+                        <h1 class="counter">46</h1>
+                    </div>
+                </div>
+                <!-- single number widget ends -->
+
+                <!-- single number widget -->
+                <div class="col-md-3 col-6">
+                    <div class="single-card recovered">
+                        <h2>মোট সুস্থ হয়েছেন</h2>
+                        <h1 class="counter">42</h1>
+                    </div>
+                </div>
+                <!-- single number widget ends -->
+
+                <!-- single number widget -->
+                <div class="col-md-3 col-6">
+                    <div class="single-card under-treatment">
+                        <h2>নতুন আক্রান্ত</h2>
+                        <h1 class="counter">209</h1>
+                    </div>
+                </div>
+                <!-- single number widget ends -->
+                <!-- single number widget -->
+                <div class="col-md-3 col-6">
+                    <div class="single-card d-time">
+                        <h2>ডাবলিং টাইম</h2>
+                        <h1 class="doubling-time">0 <span>দিন</span></h1>
+                    </div>
+                </div>
+                <!-- single number widget ends -->
+                <!-- single number widget -->
+                <div class="col-md-3 col-6">
+                    <div class="single-card weekly-growth">
+                        <h2>সাপ্তাহিক গ্রোথ রেট</h2>
+                        <h1 class="weekly-gr">0</h1>
+                    </div>
+                </div>
+                <!-- single number widget ends -->
+                <!-- single number widget -->
+                <div class="col-md-3 col-6">
+                    <div class="single-card daily-growth">
+                        <h2>দৈনিক গ্রোথ রেট</h2>
+                        <h1 class="daily-gr">0</h1>
+                    </div>
+                </div>
+                <!-- single number widget ends -->
+                <!-- single number widget -->
+                <div class="col-md-3 col-6">
+                    <div class="single-card daily-growth">
+                        <h2>কেইস পার মিলিয়ন </h2>
+                        <h1 class="case-per-ml">0</h1>
+                    </div>
+                </div>
+                <!-- single number widget ends -->
+            </div>
+        </div>
+    </section>
+    <!-- current numbers section ends -->
+
+    <!-- map section -->
+    <section class="bd-map-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-card">
+                        <div class="map" id="map"></div>
+                        <p class="section-subtitle">উপরে বাংলাদেশে যে সকল জেলায় কোভিড-১৯ সংক্রমন সনাক্ত হয়েছে সেগুলো হিটম্যাপ আকারে দেখানো হয়েছে। এখানে আমরা রোগীর সংখ্যার ভিত্তিতে সংক্রমিত স্থান গুলো বিভিন্ন রঙ এর ভিত্তিতে দেখিয়েছি। ১৫০ জনের অধিক আক্রান্ত অঞ্চল গুলো <span class="severe"><i class="fas fa-circle"></i></span> , ১২০-১৫০ জনের মধ্যে আক্তান্ত অঞ্চলকে <span class="mildly-severe"><i class="fas fa-circle"></i></span>, ৭০-১২০ জনের মধ্যে আক্তান্ত অঞ্চলকে <span class="mild"><i class="fas fa-circle"></i></span>, ৩০-৭০ জনের মধ্যে আক্তান্ত অঞ্চলকে <span class="light"><i class="fas fa-circle"></i></span>, ০০-৩০ জনের মধ্যে আক্তান্ত অঞ্চলকে <span class="start"><i class="fas fa-circle"></i></span> রঙের মাধ্যমে দেখানো হয়েছে। উপরে প্রদর্শিত সকল তথ্য <a href="https://www.iedcr.gov.bd/">IEDCR</a> হতে প্রাপ্ত। ম্যাপটি সর্বেশেষ আপডেট করা হয়েছে ১৪/০৪/২০২০ তারিখে।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- map section ends -->
+
+
+    <!-- Dhaka map section -->
+    <section class="dhaka-map-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section title -->
+                    <h1 class="section-tittle">ঢাকা শহরে কোভিড-১৯ আক্রান্ত রোগীদের অবস্থান</h1>
+                </div>
+            </div>
+                
+            <div class="row d-flex align-items-center">
+                <div class="col-12">
+                    <div class="section-card">
+                        <div class="dhakaMap" id="dhakaMap"></div>
+                        <p class="section-subtitle">এই ম্যাপে ঢাকা শহরে কোন কোন এলাকায় কতজন রোগী আছে তা দেখানো হয়েছে। এতে করে সবাই সচেতন হতে পারবে এবং আক্তান্তের পরিমান বেশী এমন স্থান গুলো এড়িয়ে চলতে পারবে। যে সকল এলাকাতে রোগীর সংখ্যা বেশী সে এলাকা গুলোর আসে পাশের হাসপাতাল গুলো আপদকালীন পরিস্থিতির জন্য প্রস্তুত রাখা যাবে। ম্যাপে দেখানো সকল তথ্য <a href="https://www.iedcr.gov.bd/">IEDCR</a> হতে প্রাপ্ত। ম্যাপটি সর্বেশেষ আপডেট করা হয়েছে ১৪/০৪/২০২০ তারিখে।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- map section ends -->
+
+
+        <!-- cta section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="cta-wrapper text-center alert alert-success">
+                            <h2>বৈশ্বিকভাবে করোনা পরিস্থিতি মহামারি আকার ধারণ করেছে। বর্তমানে এই ভাইরাসের কোন প্রতিষেধক না থাকায় সামাজিক দূরুত্ব বজায় রাখাই এটি নিয়ন্ত্রনের একমাত্র উপায়। সামাজিক যোগাযোগ কিভাবে রোগের সংক্রমন কমাতে সহায়তা করে সেটির সিমুলেশন দেখতে পারেন নিচের লিঙ্কে ক্লিক করে।</h2>
+                            <a href="flatenthecurve.html" class="btn btn-cta  btn-success">এখানে ক্লিক করুন</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- cta section ends -->
+
+
+    <!-- chart section  -->
+    <section class="chart-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 spacing">
+                    <h1 class="section-tittle">বাংলাদেশের করোনা আক্রান্তের দৈনিক গ্রোথ রেট</h1>
+                    <div id="chart2" class="chartCovid"></div>
+                </div>
+                <div class="col-md-6 col-sm-12 spacing">
+                    <h1 class="section-tittle">করোনায় মোট আক্তান্ত, মোট মৃত্যু এবং মোট সুস্থতার হার</h1>
+                    <div id="chart1" class="chartCovid"></div>
+                </div>
+                
+                <div class="col-md-6 col-sm-12">
+                    <h1 class="section-tittle">দৈনিক নতুন আক্তান্ত এবং নতুন মৃত্যু সংখ্যা</h1>
+                    <div id="chart3" class="chartCovid"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- chart section ends -->
+
+    <!-- cta section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="cta-wrapper text-center alert alert-warning">
+                        <h2>বাংলাদেশের করোনা পরিস্থিতির উপর ভিত্তি করে তৈরী SEIR মডেল এর মাধ্যমে আমরা ভবিষ্যতে রোগীর পরিমান কেমন হবে সেটি দেখানোর চেষ্টা করেছি। নিচের লিঙ্কে ক্লিক করে মডেলটি দেখতে পারেন।</h2>
+                        <a href="model.html" class="btn btn-cta  btn-warning">এখানে ক্লিক করুন</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cta section ends -->
+
+    <!-- footer section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>এই ওয়েবসাইটটি <span>❤</span> সাথে তৈরী করেছেন <a href="https://www.facebook.com/amnkhan.me">Al Amin Khan</a> & <a href="https://www.facebook.com/hridoy.all">Al-Iqram Elahee Hridoy</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section ends -->
+
+    <!-- jQuery JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Counter Up -->
+    <script src="js/waypoint.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- map js -->
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet.markercluster.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js"></script>
+
+    <!-- Chart JS -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="js/chart.js"></script>
+    
+    <script src="js/map.js"></script>
+    <!-- main script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
