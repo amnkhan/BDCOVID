@@ -50,9 +50,11 @@ a {
     padding: 20px 5px;
     border-radius: 4px;
     border: 0;
+    border: 1px solid rgb(241, 241, 241);
     margin-bottom: 25px;
-    color: #fff;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    color: #333;
+    background: #fff;
+    box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
 }
 
@@ -64,19 +66,49 @@ a {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.current-numbers-section .effected h1 {
+    
+    color: #7f5fce;
+}
+.current-numbers-section .dead h1 {
+    color: #f11771;
+}
+.current-numbers-section .recovered h1 {
+   color: #0abf54;
+}
+.current-numbers-section .under-treatment h1 {
+    color: #e1ab0a;
+}
 .current-numbers-section .effected {
-    background-image: linear-gradient( 267deg, #b37bec, #7f5fce);
+
+    border-bottom: 7px solid #7f5fce;
 }
 .current-numbers-section .dead {
-    background-image: linear-gradient( 267deg, #ff7584, #f11771);
+    border-bottom: 7px solid #f11771;
 }
 .current-numbers-section .recovered {
-    background-image: linear-gradient( 267deg, #28f387, #0abf54);
+   border-bottom: 7px solid #0abf54;
 }
 .current-numbers-section .under-treatment {
-    background-image: linear-gradient( 267deg, #f8c345, #e1ab0a);
+    border-bottom: 7px solid #e1ab0a;
+}
+.current-numbers-section .d-time {
+    border-bottom: 7px solid #333;
+}
+.current-numbers-section .weekly-growth {
+    border-bottom: 7px solid #333;
+}
+.current-numbers-section .daily-growth {
+    border-bottom: 7px solid #333;
+}
+.current-numbers-section .single-card h1 span {
+   font-size: 24px;
+   padding: 0 2px;
 }
 /* Map Section */
 .bd-map-section {
@@ -389,7 +421,7 @@ a {
         font-size: 22px;
     }
     .current-numbers-section .single-card {
-        margin-bottom: 0;
+        margin-bottom: 30px;
     }
     /* chart */
     .chart-section .section-tittle {
