@@ -68,7 +68,8 @@
             <div class="row seir-model-wrapper">
                 <div class="col-md-12">
                     <h2>বাংলাদেশের করোনা ভাইরাস মহামারীর সিমুলেশন</h2>
-                    <p><b>Disclaimer:</b> এই সিমুল্যাশনটি শুধুমাত্র গবেষণা , শিক্ষামুলক ও গণসচেতনার উদ্দেশ্যে তৈরি করা , এটা কখনো decision-making (নীতি -নির্ধারণ) করার টুল না। Covid-19 এর সংক্রমণ ও ট্রান্সমিশন নিয়ে অনেক অনিশ্চয়তা রয়েছে , এই সাধারণ মডেলটির ও সীমাবদ্ধতা রয়েছে। লেখক এই মডেলের নির্ভুলতা , ব্যবহারযোগ্যতা, বণিকযোগ্যতা, যেকোন বিশ্লেষণ, ও উপস্থাপনার ওয়্যারেন্টি দিতে অস্বীকার করেছেন।</p>
+                    <p><b>Disclaimer:</b> এই সিমুল্যাশনটি শুধুমাত্র গবেষণা , শিক্ষামুলক ও গনসচেতনতার উদ্দেশ্যে তৈরি করা , এটা কখনো decision-making (নীতি -নির্ধারণ) করার টুল না। Covid-19 এর সংক্রমণ ও ট্রান্সমিশন নিয়ে অনেক অনিশ্চয়তা রয়েছে , এই সাধারণ মডেলটির ও সীমাবদ্ধতা রয়েছে। লেখক এই মডেলের নির্ভুলতা , ব্যবহারযোগ্যতা, বণিকযোগ্যতা, যেকোন বিশ্লেষণ, ও উপস্থাপনার ওয়্যারেন্টি দিতে অস্বীকার করেছেন।</p>
+                    <p class="d-xs-block d-md-none"><b>বিঃদ্রঃ মডেলটি পূর্ণাঙ্গ ভাবে দেখতে কম্পিউটার থেকে ভিসিট করার অনুরোধ করা হচ্ছে। মোবাইলে মডেলের সব ফিচার কাজ নাও করতে পারে।</b></p>
                 </div>
 
                 <!-- chart-controls -->
@@ -96,7 +97,7 @@
 
                     <div class="control full">
                         <input class="control" type="range" id="slider_b1" onmousemove="updateParameters()" min=0 max=1 step=0.01></input>
-                        <br><div class="small tooltip">Transmission rate \(\beta_1\) =
+                        <br><div class="small">Transmission rate \(\beta_1\) =
                             <span id="slider_b1_value"></span>
                             <span class="tiny tooltiptext">সংক্রমণ  mildly infected থেকে susceptible (সংবেদনশীল) ব্যক্তিদের </span>
                         </div>
@@ -104,7 +105,7 @@
 
                     <div class="control full">
                         <input class="control" type="range" id="slider_b2" onmousemove="updateParameters()" min=0 max=1 step=0.01></input>
-                        <br><div class="small tooltip">Transmission rate \(\beta_2\) =
+                        <br><div class="small">Transmission rate \(\beta_2\) =
                             <span id="slider_b2_value"></span>
                             <span class="tiny tooltiptext">সংক্রমণ মারাত্মকভাবে সংক্রমিত থেকে susceptible (সংবেদনশীল) ব্যক্তিদের  </span>
                         </div>
@@ -112,7 +113,7 @@
 
                     <div class="control full">
                         <input class="control" type="range" id="slider_b3" onmousemove="updateParameters()" min=0 max=1 step=0.01></input>
-                        <br><div class="small tooltip">Transmission rate \(\beta_3\) =
+                        <br><div class="small">Transmission rate \(\beta_3\) =
                             <span id="slider_b3_value"></span>
                             <span class="tiny tooltiptext">সংক্রমণ সংকটপূর্ণভাবে সংক্রমিত  থেকে susceptible (সংবেদনশীল) ব্যক্তিদের </span>
                         </div>
@@ -120,7 +121,7 @@
 
                     <div class="control full">
                         <input class="control" type="range" id="slider_c" onmousemove="updateParameters()" min=0 max=1 step=0.01></input>
-                        <br><div class="small tooltip">Reported fraction \(c\) =
+                        <br><div class="small">Reported fraction \(c\) =
                             <span id="slider_c_value"></span>
                             <span class="tiny tooltiptext"> যতগুলো mildy infected cases রিপোর্ট করা হয়েছে এর ভগ্নাংশ</span>
                         </div>
@@ -233,7 +234,7 @@
                 <!-- article -->
                 <div class="col-md-12 mt-5">
                     <p>কোভিড-১৯ মহামারী পুরো বাংলাদেশের জীবন-যাপন কে ব্যহত করেছে । এই লেখাটি লিখার সময় পুরো দেশ লক-ডাউন হয়ে আছে । এখন পর্যন্ত ,সরকারী হস্তক্ষেপের(Intervention) ফলে রোগটির বিস্তারের হার মনে হচ্ছে স্থির হয়ে আসছে। যাইহোক , এখনো আমরা বলতে পারছি না ভবিষতে আমাদের জন্য কি অপেক্ষা করছে , যখন Intervention(ছোঁয়াচে রোগের বিস্তার রোধে যেইসব পদক্ষেপ নেয়া হয়েছিলো যেমন লক-ডাউন, কারফিউ ) পরিবর্তন হয়ে যাবে। ক্লাসিকাল SEIR(Susceptible → Exposed → Infected → Removed (যেমন সুস্থ ও মৃত্যু) মডেল ব্যবহার করে এই Interactive টুলের মাধ্যমে আমরা বাংলাদেশের কোভিড-১৯ রোগটির বিস্তারের মডেল বুঝার চেষ্টা করেছি । আমরা বাংলাদেশের জন্য এই মডেলের প্যারামিটার গুলো পরিবর্তন করেছি।</p>
-                    <p>SEIR মডেল একটি জনপ্রিয় epidemiological compartmental মডেল, compartmental মডেল বলার কারণ হলো এই মডেল টি পুরো জনসংখ্যা কে কিছু নির্দিষ্ট compartments এ ভাগ করে থাকে, এই মডেলটি মডেল করার চেষ্টা করে কিভাবে একটি রোগ একটি নির্দিষ্ট জনসংখ্যাতে ছড়াতে পারে । যখন কোন একটি ভাইরাল রোগ(মহামারী) একটি নির্দিষ্ট জনসংখ্যাইয় পরিচিত হয় তখন পুরো জনসংখ্যাকে আমরা ৪ ভাগে ভাগ করতে পারি , Susceptible (অর্থাৎ এই রোগ হতে আক্রান্ত হতে পারে , প্রথমে পুরো জনসংখ্যা Susceptible অবস্থায় থাকে ) , Exposed (রোগটি কোন ব্যক্তি কে আক্রমণ করেছে , কিন্তু তার লক্ষণ দেখা দিচ্ছে না কারণ রোগটি তার Incubation অবস্থায় আছে) , Infected (ব্যক্তি পুরোপুরি ভাবে আক্রান্ত) , Removed (আক্রান্ত ব্যক্তি সুস্থ হয়েছেন অথবা মারা গেছেন)। SEIR মডেল কোন রোগের বিস্তার(spread) সিমুল্যাট করার জন্য একটি আদর্শায়িত মডেল যা এখন ফ্রন্টলাইন গবেষণাতে ব্যবহার হচ্ছে [<a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30260-9/fulltext" id="wu" target="_blank">Wu, et. al</a>, <a href="https://cmmid.github.io/topics/covid19/current-patterns-transmission/wuhan-early-dynamics.html" id="k" target="_blank"> Kucharski et. al</a>].</p>
+                    <p>SEIR মডেল একটি জনপ্রিয় epidemiological compartmental মডেল, compartmental মডেল বলার কারণ হলো এই মডেল টি পুরো জনসংখ্যা কে কিছু নির্দিষ্ট compartments এ ভাগ করে থাকে, এই মডেলটি মডেল করার চেষ্টা করে কিভাবে একটি রোগ একটি নির্দিষ্ট জনসংখ্যাতে ছড়াতে পারে । যখন কোন একটি ভাইরাল রোগ(মহামারী) একটি নির্দিষ্ট জনসংখ্যায় পরিচিত হয় তখন পুরো জনসংখ্যাকে আমরা ৪ ভাগে ভাগ করতে পারি , Susceptible (অর্থাৎ এই রোগ হতে আক্রান্ত হতে পারে , প্রথমে পুরো জনসংখ্যা Susceptible অবস্থায় থাকে ) , Exposed (রোগটি কোন ব্যক্তি কে আক্রমণ করেছে , কিন্তু তার লক্ষণ দেখা দিচ্ছে না কারণ রোগটি তার Incubation অবস্থায় আছে) , Infected (ব্যক্তি পুরোপুরি ভাবে আক্রান্ত) , Removed (আক্রান্ত ব্যক্তি সুস্থ হয়েছেন অথবা মারা গেছেন)। SEIR মডেল কোন রোগের বিস্তার(spread) সিমুল্যাট করার জন্য একটি আদর্শায়িত মডেল যা এখন ফ্রন্টলাইন গবেষণাতে ব্যবহার হচ্ছে [<a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30260-9/fulltext" id="wu" target="_blank">Wu, et. al</a>, <a href="https://cmmid.github.io/topics/covid19/current-patterns-transmission/wuhan-early-dynamics.html" id="k" target="_blank"> Kucharski et. al</a>].</p>
                 </div>
 
                 <div class="col-md-6 mt-5">
