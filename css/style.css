@@ -243,7 +243,9 @@ a {
     font-size: 18px;
     font-weight: 600;
 }
-
+.single-article img {
+    width: 100%;
+}
 .single-article .notice p {margin-bottom: 0;}
 /* chart section */
 .chart-section {
