@@ -283,6 +283,24 @@ a {
     margin-bottom: 0;
     padding: 10px 20px;
 }
+/* footer section */
+.footer-section {
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.footer-section p {
+    font-size: 14px;
+}
+
+.footer-section p span {
+    color: #ff5959;
+}
+
+.footer-section p a {
+    text-decoration: none;
+    font-weight: 600;
+}
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     .header-section {
@@ -474,6 +492,9 @@ a {
     }
     .cta-wrapper {
         padding: 80px 60px;
+    }
+    .footer-section p {
+        font-size: 18px;
     }
 }
 

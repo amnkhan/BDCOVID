@@ -1,7 +1,7 @@
 (function(){
   var geojson_data;
 $.ajax({
-  url: "https://raw.githubusercontent.com/amnkhan/BDCOVID19/backend/district.json?token=AGEC3QXWZRQD4YQRC3BVHS26TWHP6",
+  url: "https://raw.githubusercontent.com/amnkhan/BDCOVID19/backend/district.json?token=AGEC3QTGI75FDKN4WVLZ7U26T3BUS",
   method: "GET",
   async: false,
   success : function(data){
