@@ -7,6 +7,9 @@ body {
     color: #333;
     background-color: #f4f8fb;
 }
+.js-plotly-plot .plotly, .js-plotly-plot .plotly div {
+    font-family:  'Roboto', sans-serif;
+}
 a {
     color: #0abf54;
     text-decoration: none;
@@ -93,12 +96,12 @@ a {
 }
 .map {
     width: 100%;
-    height: 400px;
+    height: 500px;
     margin-bottom: 20px;
 }
 .dhakaMap {
     width: 100%;
-    height: 300px;
+    height: 400px;
     margin-bottom: 20px;
 }
 .bd-map-section p span{
@@ -210,6 +213,21 @@ a {
 }
 
 .single-article .notice p {margin-bottom: 0;}
+/* chart section */
+.chart-section {
+    padding: 50px 0;
+}
+.chart-section .section-tittle {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.chart-section .spacing {
+    margin-bottom: 50px;
+}
+.chartCovid {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     .header-section {
@@ -304,6 +322,11 @@ a {
     .single-article a {
         font-size: 20px;
     }
+    /* chart */
+    .chart-section .section-tittle {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
 }
 
 /* // Large devices (desktops, 992px and up) */
@@ -350,7 +373,7 @@ a {
         margin-bottom: 20px;
     }
     .dhakaMap {
-        height: 450px;
+        height: 500px;
     }
     .bd-map-section .info.leaflet-control h4 {
         font-size: 18px;
@@ -367,6 +390,14 @@ a {
     }
     .current-numbers-section .single-card {
         margin-bottom: 0;
+    }
+    /* chart */
+    .chart-section .section-tittle {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+    .chart-section .spacing {
+        margin-bottom: 80px;
     }
 }
 

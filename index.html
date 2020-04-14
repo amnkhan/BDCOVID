@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/Markercluster1.2.css">
     <link rel="stylesheet" href="css/Markercluster1.2.default.css">
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -21,7 +22,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f08dc14b37.js" crossorigin="anonymous"></script>
 
-    <title>BD Covid19</title>
+    <title>BD Covid - Bangladesh Corona Update</title>
 </head>
 <body>
     
@@ -139,11 +140,18 @@
     <section class="chart-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <div id="chart1"></div>
+                <div class="col-md-12 col-sm-12 spacing">
+                    <h1 class="section-tittle">বাংলাদেশের করোনা আক্রান্তের দৈনিক গ্রোথ রেট</h1>
+                    <div id="chart2" class="chartCovid"></div>
                 </div>
-                <div class="col-md-6">
-                    <div id="chart2"></div>
+                <div class="col-md-6 col-sm-12 spacing">
+                    <h1 class="section-tittle">করোনায় মোট আক্তান্ত, মোট মৃত্যু এবং মোট সুস্থতার হার</h1>
+                    <div id="chart1" class="chartCovid"></div>
+                </div>
+                
+                <div class="col-md-6 col-sm-12">
+                    <h1 class="section-tittle">দৈনিক নতুন আক্তান্ত এবং নতুন মৃত্যু সংখ্যা</h1>
+                    <div id="chart3" class="chartCovid"></div>
                 </div>
             </div>
         </div>
