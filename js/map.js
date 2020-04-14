@@ -55,7 +55,7 @@ function getColor(d) {
   d > 70   ? '#F64747' :
   d > 30   ? '#FF6464' :
   d > 0   ? '#F98F8F' :
-  '#F98F8F';
+  '#F3CECE';
 }
 
 function style(feature) {

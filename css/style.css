@@ -10,6 +10,15 @@ body {
 .js-plotly-plot .plotly, .js-plotly-plot .plotly div {
     font-family:  'Roboto', sans-serif;
 }
+.table .phoneNumber a {
+    font-size: 16px;
+    color: #ff5959;
+    font-weight: 500;
+    font-family:  'Roboto', sans-serif;
+}
+.helpline-section {
+    padding: 40px 0;
+}
 a {
     color: #0abf54;
     text-decoration: none;
@@ -154,6 +163,10 @@ a {
 .bd-map-section p span.light i {
     color: #F98F8F;
 }
+.bd-map-section p span.start i {
+    color: #F3CECE;
+}
+
 .bd-map-section .info.leaflet-control h4 {
     font-size: 10px;
 }
@@ -528,6 +541,12 @@ a {
     }
     .seir-model-wrapper h3 {
         font-size: 24px;
+    }
+    .table .phoneNumber a {
+        font-size: 20px;
+    }
+    .helpline-section {
+        padding: 60px 0;
     }
 }
 
