@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 
 
     // Daily percentage calculation
-    var confirmed_cases=[3,3,3,3,3,3,3,5,8,10,14,17,20,25,27,33,39,46,48,48,48,49,51,54,61,161];
+    var confirmed_cases=[3,3,3,3,3,3,3,5,8,10,14,17,20,25,27,33,39,39,44,48,48,48,49,51,54,56,61,70,88,123,164,218,330,424,482,621,803,1011];
 
    
 
@@ -109,10 +109,12 @@ jQuery(document).ready(function($) {
     var doubling_time = document.querySelector('.doubling-time');
     var weekly_gr = document.querySelector('.weekly-gr');
     var daily_gr = document.querySelector('.daily-gr');
+    var case_per_ml = document.querySelector('.case-per-ml');
     function updateUi () {
         doubling_time.innerHTML = `${double_time[0]} <span>দিন</span>`;
         weekly_gr.innerHTML = `<span>+</span>${week_growth[0]}<span>%</span>`;
         daily_gr.innerHTML = `<span>+</span>${daily_growth_in[0]}<span>%</span>`;
+        case_per_ml.innerHTML = `${(confirmed_cases[confirmed_cases.length - 1] / 180).toFixed(2)} <span>জন</span>`
     }
 
     updateUi();

@@ -301,6 +301,29 @@ a {
     text-decoration: none;
     font-weight: 600;
 }
+/* SEIR Model */
+.seir-model-section {
+    padding: 30px 0;
+}
+
+.seir-model-wrapper h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.seir-model-wrapper p {
+    color: #333;
+    /* font-size: 26px; */
+}
+
+.seir-model-wrapper ul {
+    margin: 0;
+}
+
+.seir-model-wrapper h3 {
+    font-size: 22px;
+}
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     .header-section {
@@ -495,6 +518,16 @@ a {
     }
     .footer-section p {
         font-size: 18px;
+    }
+    /* model section */
+    .seir-model-section {
+        padding: 60px 0;
+    }
+    .seir-model-wrapper h2 {
+        font-size: 32px;
+    }
+    .seir-model-wrapper h3 {
+        font-size: 24px;
     }
 }
 
