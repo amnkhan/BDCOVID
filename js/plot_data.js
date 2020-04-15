@@ -64,8 +64,8 @@ var default_controls = {
   b1N_init: 0.85,   //initial beta_1 value
   b2N_init: 0.00,   //initial beta_2 value
   b3N_init: 0.00,   //initial beta_3 value
-  b1N_T0: 0.21,     //beta_1 after intervention 0
-  b1N_T1: 0.21,     //beta_1 after intervention 1
+  b1N_T0: 0.25,     //beta_1 after intervention 0
+  b1N_T1: 0.25,     //beta_1 after intervention 1
   T0: 19,           //time of intervention 0
   diag_frac: 0.14
 }
