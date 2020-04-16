@@ -42,7 +42,8 @@ var data_raw_SL = [ {t: moment('08-03-2020', date_format), y: [3, 0, 0, 0]},
   {t: moment('12-04-2020', date_format), y: [621, 39, 34, 0]},
   {t: moment('13-04-2020', date_format), y: [803, 42, 39, 0]},
   {t: moment('14-04-2020', date_format), y: [1011, 42, 46, 0]},
-  {t: moment('14-04-2020', date_format), y: [1231, 49, 50, 0]},
+  {t: moment('15-04-2020', date_format), y: [1231, 49, 50, 0]},
+  {t: moment('16-04-2020', date_format), y: [1572, 49, 60, 0]},
 
 
 
