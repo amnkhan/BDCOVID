@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
     }
     }
     dbt(confirmed_cases)
-    console.log(double_time);
+    // console.log(double_time);
 
     var week_growth=[]
     function weekgr(cases){
@@ -67,7 +67,7 @@ jQuery(document).ready(function($) {
 
     weekgr(confirmed_cases)
     
-    console.log(week_growth)
+    // console.log(week_growth)
 
     var daily_growth_in=[]
     function dailygri(cases){
@@ -101,7 +101,7 @@ jQuery(document).ready(function($) {
 
     dailygri(confirmed_cases)
     
-    console.log(daily_growth_in);
+    // console.log(daily_growth_in);
 
     // update the UI
     var doubling_time = document.querySelector('.doubling-time');
@@ -116,5 +116,5 @@ jQuery(document).ready(function($) {
     }
 
     updateUi();
-    console.log( double_time[0].toString())
+    // console.log( double_time[0].toString())
 });
