@@ -1,11 +1,14 @@
 /* Hind Shiliguri Bangla Font */
-@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,500,600&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,500,600&display=swap'); */
 
 body {
-    font-family: 'Hind Siliguri', sans-serif;
+    font-family: 'SolaimanLipi', sans-serif;
     font-size: 18px;
     color: #333;
     background-color: #f4f8fb;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
 }
 .js-plotly-plot .plotly, .js-plotly-plot .plotly div {
     font-family:  'Roboto', sans-serif;
@@ -78,6 +81,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family:  'Roboto', sans-serif;
 }
 
 .current-numbers-section .effected h1 {
@@ -384,6 +388,7 @@ a {
         color: rgba(26, 26, 26, 0.6);
         font-weight: 500;
         font-size: 15px;
+        font-weight: 600;
     }
     .header-section .navbar-nav .nav-link i {
         margin-right: 5px;
@@ -451,6 +456,7 @@ a {
     .cta-wrapper .btn-cta {
         font-size: 22px;
     }
+    
 }
 
 /* // Large devices (desktops, 992px and up) */
@@ -461,7 +467,7 @@ a {
     }
     .header-section .navbar-nav .nav-link {
         padding: 0 10px;
-        font-size: 18px;
+        font-size: 16px;
     }
     /* Numbers */
     .current-numbers-section {
@@ -547,6 +553,18 @@ a {
     }
     .helpline-section {
         padding: 60px 0;
+    }
+    /* footer */
+    .col-md-12.text-center.footer-text {
+        justify-content: space-between;
+        /* flex-direction: row; */
+        display: flex;
+    }
+    .footer-section p {
+        font-size: 16px;
+    }
+    .footer-section p a {
+        font-weight: 400;
     }
 }
 
