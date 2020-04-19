@@ -1,0 +1,38 @@
+{
+  "name": "bdcovid",
+  "version": "1.0.0",
+  "description": "Bangladesh Corona Virus Update ",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amnkhan/BDCOVID19.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amnkhan/BDCOVID19/issues"
+  },
+  "homepage": "https://github.com/amnkhan/BDCOVID19#readme",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.12.1",
+    "jquery.counterup": "^2.1.0",
+    "mapbox-gl": "^1.9.1",
+    "plotly.js-dist": "^1.53.0",
+    "popper.js": "^1.16.1",
+    "waypoint": "^0.2.8",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}

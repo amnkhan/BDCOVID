@@ -4,11 +4,8 @@ jQuery(document).ready(function($) {
         time: 1000
     });
     // Daily percentage calculation
-    var confirmed_cases=[3,3,3,3,3,3,3,5,8,10,14,17,20,25,27,33,39,39,44,48,48,48,49,51,54,56,61,70,88,123,164,218,330,424,482,621,803,1011,1231,1572,1838,2144,2456];
-
-   
-
-    var double_time = []; 
+    var confirmed_cases=window.covidData.confirmed_cases;
+    var double_time = [];
 
     function dbt (cases) {
     

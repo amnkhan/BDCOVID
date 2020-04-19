@@ -1,56 +1,70 @@
 
 'use strict';
 
-var date_format = 'DD-MM-YYYY';
 
+
+
+// var date_format = 'DD-MM-YYYY';
+// var data_raw_SL = [ {t: moment('08-03-2020', date_format), y: [3, 0, 0, 0]},
+//     {t: moment('09-03-2020', date_format), y: [3, 0, 0, 0]},
+//     {t: moment('10-03-2020', date_format), y: [3, 0, 0, 0]},
+//     {t: moment('11-03-2020', date_format), y: [3, 0, 0, 0]},
+//     {t: moment('12-03-2020', date_format), y: [3, 0, 0, 0]},
+//     {t: moment('13-03-2020', date_format), y: [3, 0, 0, 0]},
+//     {t: moment('14-03-2020', date_format), y: [3, 0, 0, 0]},
+//     {t: moment('15-03-2020', date_format), y: [5, 0, 0, 0]},
+//     {t: moment('16-03-2020', date_format), y: [8, 2, 0, 0]},
+//     {t: moment('17-03-2020', date_format), y: [10, 3, 0, 0]},
+//     {t: moment('18-03-2020', date_format), y: [14, 3, 1, 1]},
+//     {t: moment('19-03-2020', date_format), y: [17, 3, 1, 1]},
+//     {t: moment('20-03-2020', date_format), y: [20, 3, 1, 0]},
+//     {t: moment('21-03-2020', date_format), y: [25,3, 3, 0]},
+//     {t: moment('22-03-2020', date_format), y: [27, 5, 2, 0]},
+//     {t: moment('23-03-2020', date_format), y: [33, 5, 3, 1]},
+//     {t: moment('24-03-2020', date_format), y: [39, 5, 4, 0]},
+//     {t: moment('25-03-2020', date_format), y: [39, 7, 4, 0]},
+//     ({t: moment('26-03-2020', date_format), y: [44, 11, 5, 1]}),
+//     {t: moment('27-03-2020', date_format), y: [48, 11, 5, 0]},
+//     {t: moment('28-03-2020', date_format), y: [48, 15, 5, 0]},
+//     {t: moment('29-03-2020', date_format), y: [48, 19, 5, 2]},
+//     {t: moment('30-03-2020', date_format), y: [49, 25, 5, 2]},
+//     {t: moment('31-03-2020', date_format), y: [51, 25, 5, 1]},
+//     {t: moment('01-04-2020', date_format), y: [54, 25, 5, 1]},
+//     {t: moment('02-04-2020', date_format), y: [56, 26, 6, 0]},
+//     {t: moment('03-04-2020', date_format), y: [61, 33, 6, 0]},
+//     {t: moment('04-04-2020', date_format), y: [70, 33, 8, 0]},
+//     {t: moment('05-04-2020', date_format), y: [88, 33, 9, 0]},
+//     {t: moment('06-04-2020', date_format), y: [123, 33, 12, 0]},
+//     {t: moment('07-04-2020', date_format), y: [164, 33, 17, 0]},
+//     {t: moment('08-04-2020', date_format), y: [218, 33, 20, 0]},
+//     {t: moment('09-04-2020', date_format), y: [330, 33, 21, 0]},
+//     {t: moment('10-04-2020', date_format), y: [424, 33, 27, 0]},
+//     {t: moment('11-04-2020', date_format), y: [482, 36, 30, 0]},
+//     {t: moment('12-04-2020', date_format), y: [621, 39, 34, 0]},
+//     {t: moment('13-04-2020', date_format), y: [803, 42, 39, 0]},
+//     {t: moment('14-04-2020', date_format), y: [1011, 42, 46, 0]},
+//     {t: moment('15-04-2020', date_format), y: [1231, 49, 50, 0]},
+//     {t: moment('16-04-2020', date_format), y: [1572, 49, 60, 0]},
+//     {t: moment('17-04-2020', date_format), y: [1838, 58, 75, 0]},
+//     {t: moment('18-04-2020', date_format), y: [2144, 66, 84, 0]},
+//     {t: moment('19-04-2020', date_format), y: [2456, 75, 91, 0]},
+//
+//
+//
+// ];
 //Data array: [total confirmed cases, recovered, deaths, foreign_input_to_quarantine]
-var data_raw_SL = [ {t: moment('08-03-2020', date_format), y: [3, 0, 0, 0]},
-  {t: moment('09-03-2020', date_format), y: [3, 0, 0, 0]},
-  {t: moment('10-03-2020', date_format), y: [3, 0, 0, 0]},
- {t: moment('11-03-2020', date_format), y: [3, 0, 0, 0]},
-  {t: moment('12-03-2020', date_format), y: [3, 0, 0, 0]},
-  {t: moment('13-03-2020', date_format), y: [3, 0, 0, 0]},
- {t: moment('14-03-2020', date_format), y: [3, 0, 0, 0]},
- {t: moment('15-03-2020', date_format), y: [5, 0, 0, 0]},
-  {t: moment('16-03-2020', date_format), y: [8, 2, 0, 0]},
-  {t: moment('17-03-2020', date_format), y: [10, 3, 0, 0]},
-  {t: moment('18-03-2020', date_format), y: [14, 3, 1, 1]},
-  {t: moment('19-03-2020', date_format), y: [17, 3, 1, 1]},
-  {t: moment('20-03-2020', date_format), y: [20, 3, 1, 0]},
-{t: moment('21-03-2020', date_format), y: [25,3, 3, 0]},
-  {t: moment('22-03-2020', date_format), y: [27, 5, 2, 0]},
-  {t: moment('23-03-2020', date_format), y: [33, 5, 3, 1]},
-  {t: moment('24-03-2020', date_format), y: [39, 5, 4, 0]},
-   {t: moment('25-03-2020', date_format), y: [39, 7, 4, 0]},
- ({t: moment('26-03-2020', date_format), y: [44, 11, 5, 1]}),
-  {t: moment('27-03-2020', date_format), y: [48, 11, 5, 0]},
-  {t: moment('28-03-2020', date_format), y: [48, 15, 5, 0]},
-  {t: moment('29-03-2020', date_format), y: [48, 19, 5, 2]},
-  {t: moment('30-03-2020', date_format), y: [49, 25, 5, 2]},
-  {t: moment('31-03-2020', date_format), y: [51, 25, 5, 1]},
-  {t: moment('01-04-2020', date_format), y: [54, 25, 5, 1]},
-  {t: moment('02-04-2020', date_format), y: [56, 26, 6, 0]},
-  {t: moment('03-04-2020', date_format), y: [61, 33, 6, 0]},
-  {t: moment('04-04-2020', date_format), y: [70, 33, 8, 0]},
-  {t: moment('05-04-2020', date_format), y: [88, 33, 9, 0]},
-  {t: moment('06-04-2020', date_format), y: [123, 33, 12, 0]},
-  {t: moment('07-04-2020', date_format), y: [164, 33, 17, 0]},
-  {t: moment('08-04-2020', date_format), y: [218, 33, 20, 0]},
-  {t: moment('09-04-2020', date_format), y: [330, 33, 21, 0]},
-  {t: moment('10-04-2020', date_format), y: [424, 33, 27, 0]},
-  {t: moment('11-04-2020', date_format), y: [482, 36, 30, 0]},
-  {t: moment('12-04-2020', date_format), y: [621, 39, 34, 0]},
-  {t: moment('13-04-2020', date_format), y: [803, 42, 39, 0]},
-  {t: moment('14-04-2020', date_format), y: [1011, 42, 46, 0]},
-  {t: moment('15-04-2020', date_format), y: [1231, 49, 50, 0]},
-  {t: moment('16-04-2020', date_format), y: [1572, 49, 60, 0]},
-	{t: moment('17-04-2020', date_format), y: [1838, 58, 75, 0]},
-	{t: moment('18-04-2020', date_format), y: [2144, 66, 84, 0]},
-	{t: moment('19-04-2020', date_format), y: [2456, 75, 91, 0]},
+var data_raw_SL = [];
+var covidData = window.covidData;
+var date_format = 'DD-MM-YYYY';
+var loopKey = window.covidData.date;
+for( var property in loopKey){
+    var a = property;
+    var b = loopKey[property]
+    data_raw_SL.push(
+        {t: moment(b, date_format), y: [covidData.confirmed_cases[a],covidData.recovery[a], covidData.death[a],  0]}
+    )
+}
 
-
-
-                  ];
 
 function getDataSriLanka()
 {
@@ -85,6 +99,8 @@ var last_active_tooltip_day = 0;
 
 window.onload = function()
 {
+
+
   //Update UI controls to match default values
   document.getElementById("slider_finalT").value = default_controls.T_pred;
   document.getElementById("slider_finalT_value").innerHTML = default_controls.T_pred;
