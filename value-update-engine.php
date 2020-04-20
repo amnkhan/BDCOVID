@@ -1,5 +1,8 @@
 <?php
-
+if(!defined('ORIGIN')){
+	echo 'UnAutorised';
+	return false;
+}
 function run_update(){
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);

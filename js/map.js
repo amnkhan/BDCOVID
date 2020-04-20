@@ -1,13 +1,24 @@
 (function(){
   var geojson_data;
+// $.ajax({
+//   url: "https://raw.githubusercontent.com/amnkhan/BDCOVID19/backend/district.json?token=AGEC3QSEETZOWJNOQQD2PXC6UQ3WW",
+//   method: "GET",
+//   async: false,
+//   success : function(data){
+//     geojson_data = JSON.parse(data);
+//
+//   }
+// });
 $.ajax({
-  url: "https://raw.githubusercontent.com/amnkhan/BDCOVID19/backend/district.json?token=AGEC3QSEETZOWJNOQQD2PXC6UQ3WW",
-  method: "GET",
-  async: false,
-  success : function(data){
-    geojson_data = JSON.parse(data);
-  }
-});
+        url: "district_final.json",
+        method: "GET",
+        async: false,
+        success : function(data){
+            geojson_data = data
+        }
+    });
+
+    // console.log(geojson_data);
 var mapboxAccessToken = "pk.eyJ1IjoiYW1ua2hhbiIsImEiOiJjazg3ZzJpdmswNXp4M2dxdnR5NnM2b3V5In0.sDPqIb4yM4CSY8mzsDaX8w";
 var map = L.map('map').setView([23.6850, 90.3563], 6);
 
@@ -161,7 +172,121 @@ var mcg = L.markerClusterGroup({
     singleMarkerMode: true,
     spiderfyOnMaxZoom: true
 });
-
+var points = [];
+var todays_data = {
+    'adabor': 5,
+    'agargaon': 6,
+    'armanitola': 5,
+    'ashkona': 5,
+    'azimpur': 5,
+    'babubazar': 5,
+    'badda': 5,
+    'bailyroad': 5,
+    'banani': 5,
+    'bangshal': 5,
+    'banianagar': 9,
+    'basabo': 5,
+    'bashundhora': 5,
+    'begunbari': 5,
+    'begumbazar': 5,
+    'beribadh': 5,
+    'bokshibazar': 5,
+    'bosila': 5,
+    'buetarea': 5,
+    'centralroad': 5,
+    'chankharpool': 5,
+    'chawkbazar': 5,
+    'dhakkeshori': 11,
+    'demra': 5,
+    'dhanmondi': 5,
+    'dholaikhal': 5,
+    'doyaganj': 5,
+    'eskaton': 5,
+    'faridabagh': 5,
+    'farmgate': 5,
+    'gendaria': 5,
+    'goran': 5,
+    'gopibag': 5,
+    'greenroad': 5,
+    'gulistan': 5,
+    'gulshan': 5,
+    'hatirjhil': 5,
+    'hatirpool': 5,
+    'hazaribagh': 5,
+    'islampur': 5,
+    'jailgate': 5,
+    'jatrabari': 5,
+    'jigatala': 5,
+    'jurain': 5,
+    'kallyanpur': 5,
+    'kamrangirchar': 5,
+    'kazipara': 5,
+    'kawranbazar': 5,
+    'kochukhet': 5,
+    'khilgaon': 5,
+    'khilkhet': 5,
+    'koltabazar': 5,
+    'kodomtoli': 5,
+    'kotowali': 5,
+    'kuril': 5,
+    'lalbagh': 5,
+    'laxmibazar': 5,
+    'malitola': 5,
+    'malibagh': 5,
+    'manikdi': 5,
+    'matuail': 5,
+    'mirhajaribagh': 5,
+    'mirpur1': 5,
+    'mirpur6': 5,
+    'mirpur10': 5,
+    'mirpur11': 5,
+    'mirpur12': 5,
+    'mirpur13': 5,
+    'mirpur14': 5,
+    'mitford': 5,
+    'mogbazar': 5,
+    'mohakhali': 5,
+    'mohonpur': 5,
+    'mohammadpur': 5,
+    'motijeel': 5,
+    'mugda': 5,
+    'nawabpur': 5,
+    'nawabganj': 5,
+    'narinda': 5,
+    'nakhalpara': 5,
+    'nikunja': 5,
+    'pirerbagh': 5,
+    'puranapaltan': 5,
+    'rajarbagh': 5,
+    'rampura': 5,
+    'ramna': 5,
+    'rayerbagh': 5,
+    'rayerbazar': 5,
+    'sabujbagh': 5,
+    'sadarghat': 5,
+    'sayedabad': 5,
+    'sciencelab': 5,
+    'shahalibagh': 5,
+    'shahbag': 5,
+    'shakharibazar ': 5,
+    'shantibagh': 5,
+    'shampur': 5,
+    'shantinagar': 5,
+    'shaymoli': 5,
+    'shewrapara': 5,
+    'shekhertek': 5,
+    'showarighat': 5,
+    'siddheshwari': 5,
+    'sonirakhra': 5,
+    'sutrapur': 5,
+    'tejgaon': 5,
+    'tezturibazar': 5,
+    'tolarbag': 5,
+    'urduroad': 5,
+    'uttara': 5,
+    'vatara': 5,
+    'wari': 5,
+}
 var city = dhakaCity = {
     'adabor': [23.773539, 90.354871],
     'agargaon': [23.779344, 90.373559],
@@ -277,6 +402,17 @@ var city = dhakaCity = {
     'wari': [23.717422, 90.417380],
 }
 
+for(var key in city){
+  var   value = city[key]
+    var loop  = todays_data[key];
+    var currentArray = [];
+    currentArray.push(value[0],value[1],loop)
+    for (var i = 0; i < loop; i++) {
+        points.push(currentArray)
+    }
+}
+// console.log(points);
+//@todo update todays_data and replace addressPoints with points
 var adressPoints = [
   // Last Update Data (14/04/2020)
   [23.773539, 90.354871, "5"], // adabor
@@ -867,9 +1003,6 @@ var adressPoints = [
   [23.717422, 90.417380, "27"], // Wari            
   [23.717422, 90.417380, "27"], // Wari            
 ]
-
-
-
 
 for (var i = 0; i < adressPoints.length; i++) {
     var a = adressPoints[i];

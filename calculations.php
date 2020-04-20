@@ -1,5 +1,5 @@
 <?php
-define( 'ABSTRACT', true );
+define( 'ORIGIN', true );
 //update data file every 6 hour
 require __DIR__ . '/value-update-engine.php';
 
@@ -23,28 +23,29 @@ function initialize() {
 			$json['death'][ $lastKey ]           = $data['today_daily_count'][0]['Cumulative_Death'];
 			$json['recovery'][ $lastKey ]        = $data['today_daily_count'][0]['Cumulative_Recovery'];
 
-			$ApiDist   = $data['district_wise_cases'];
-			$districts = file_get_contents( 'district_final.json' );
-			$districts = json_decode( $districts, true );
-			$districts = $districts['features'];
-			$districts = array_column( $districts, 'properties' );
-
-//			pri_dump($ApiDist);
-			foreach ( $districts as $district ) {
-
-				$value = search( $ApiDist, 'district_city_eng', $district['name'] );
-
-				if ( count( $value ) > 0 ) {
-					$district['p'] = $value[0]['cases'];
-//					pri_dump( $district );
-				}
-			}
 
 			$fp = fopen( 'store.json', 'w' );
 			fwrite( $fp, json_encode( $json ) );
 			fclose( $fp );
-//			pri_dump($json);
+			//			pri_dump($json);
 //			pri_dump($data);
+			$ApiDist         = $data['district_wise_cases'];
+			$districts       = file_get_contents( 'district_final.json' );
+			$districts_array = json_decode( $districts, true );
+			$districts       = $districts_array['features'];
+			$props           = array_column( $districts, 'properties' );
+
+//			pri_dump($ApiDist);
+			foreach ( $props as $key => $prop ) {
+				$value = search( $ApiDist, 'district_city_eng', $prop['name'] );
+				if ( count( $value ) > 0 ) {
+					$districts_array['features'][ $key ]['properties']['p'] = $value[0]['cases'];
+				}
+			}
+//			pri_dump( $districts_array );
+			$dp = fopen( 'district_final.json', 'w' );
+			fwrite( $dp, json_encode( $districts_array ) );
+			fclose( $dp );
 		}
 	}
 
