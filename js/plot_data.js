@@ -1,9 +1,6 @@
 
 'use strict';
 
-
-
-
 // var date_format = 'DD-MM-YYYY';
 // var data_raw_SL = [ {t: moment('08-03-2020', date_format), y: [3, 0, 0, 0]},
 //     {t: moment('09-03-2020', date_format), y: [3, 0, 0, 0]},
