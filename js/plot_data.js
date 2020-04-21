@@ -48,10 +48,7 @@ var data_raw_SL = [ {t: moment('08-03-2020', date_format), y: [3, 0, 0, 0]},
 	{t: moment('18-04-2020', date_format), y: [2144, 66, 84, 0]},
 	{t: moment('19-04-2020', date_format), y: [2456, 75, 91, 0]},
 	{t: moment('20-04-2020', date_format), y: [2948, 85, 101, 0]},
-
-
-
-                  ];
+];
 
 function getDataSriLanka()
 {
@@ -67,8 +64,8 @@ var data_SL = getDataSriLanka();
 var default_controls = {
   T_pred: 7,        //prediction length
   b1N_init: 0.85,   //initial beta_1 value
-  b2N_init: 0.00,   //initial beta_2 value
-  b3N_init: 0.00,   //initial beta_3 value
+  b2N_init: 0.05,   //initial beta_2 value
+  b3N_init: 0.05,   //initial beta_3 value
   b1N_T0: 0.30,     //beta_1 after intervention 0
   b1N_T1: 0.30,     //beta_1 after intervention 1
   T0: 19,           //time of intervention 0
