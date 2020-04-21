@@ -1,13 +1,21 @@
 (function(){
   var geojson_data;
-$.ajax({
-  url: "https://raw.githubusercontent.com/amnkhan/BDCOVID19/master/district.json?token=AFJRLIAXT7JWOB6LJPMMVR26U6NLM",
-  method: "GET",
-  async: false,
-  success : function(data){
-    geojson_data = JSON.parse(data);
-  }
-});
+// $.ajax({
+//   url: "district.json",
+//   method: "GET",
+//   async: false,
+//   success : function(data){
+//     geojson_data = JSON.parse(data);
+//   }
+// });
+  $.ajax({
+    url: "district.json",
+    method: "GET",
+    async: false,
+    success : function(data){
+        geojson_data = data
+    }
+  });
 var mapboxAccessToken = "pk.eyJ1IjoiYW1ua2hhbiIsImEiOiJjazg3ZzJpdmswNXp4M2dxdnR5NnM2b3V5In0.sDPqIb4yM4CSY8mzsDaX8w";
 var map = L.map('map').setView([23.6850, 90.3563], 6);
 
