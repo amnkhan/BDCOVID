@@ -48,6 +48,7 @@ var data_raw_SL = [ {t: moment('08-03-2020', date_format), y: [3, 0, 0, 0]},
 	{t: moment('18-04-2020', date_format), y: [2144, 66, 84, 0]},
 	{t: moment('19-04-2020', date_format), y: [2456, 75, 91, 0]},
 	{t: moment('20-04-2020', date_format), y: [2948, 85, 101, 0]},
+	{t: moment('21-04-2020', date_format), y: [3382, 87, 110, 0]},
 ];
 
 function getDataSriLanka()
