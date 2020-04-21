@@ -246,6 +246,7 @@ var confirmed_cases=[3,3,3,3,3,3,3,5,8,10,14,17,20,25,27,33,39,39,44,48,48,48,49
 var death=[0,0,0,0,0,0,0,0,0,0,1,1,1,3,2,3,4,4,5,5,5,5,5,5,5,6,6,8,9,12,12,20,21,27,30,34,39,46,50,60,75,84,91,101];
 var recovery=[0,0,0,0,0,0,0,0,2,3,3,3,3,3,5,5,5,7,11,11,15,19,25,25,25,26,33,33,33,33,33,33,33,33,36,39,42,42,49,49,58,66,75,85];
 
+console.log(death.length , recovery.length, confirmed_cases.length)
 // console.log(death.length,recovery.length,confirmed_cases.length,date.length)  
 var new_cases=[];
 for(let i = 0; i< confirmed_cases.length; i++) {
