@@ -1,9 +1,8 @@
 (function(){
   var geojson_data;
 $.ajax({
-  url: "https://bdcovid.com/district.json",
+  url: "district.json",
   method: "GET",
-  dataType : 'json',
   async: false,
   success : function(data){
     geojson_data = JSON.parse(data);
