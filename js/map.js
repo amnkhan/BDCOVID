@@ -1,7 +1,7 @@
 (function(){
   var geojson_data;
 $.ajax({
-  url: "district.json",
+  url: "https://raw.githubusercontent.com/amnkhan/BDCOVID19/master/district.json?token=AFJRLIAXT7JWOB6LJPMMVR26U6NLM",
   method: "GET",
   async: false,
   success : function(data){
@@ -63,7 +63,7 @@ function getColor(d) {
 function style(feature) {
   return {
     fillColor: getColor(feature.properties.p),
-    weight: 1,
+    weight: 2,
     opacity: 1,
     color: 'white',
     dashArray: '3',
