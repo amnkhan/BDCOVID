@@ -4,7 +4,7 @@
 var date_format = 'DD-MM-YYYY';
 
 //Data array: [total confirmed cases, recovered, deaths, foreign_input_to_quarantine]
-var data_raw_SL = [ {t: moment('08-03-2020', date_format), y: [3, 0, 0, 0]},
+var data_raw_BD = [ {t: moment('08-03-2020', date_format), y: [3, 0, 0, 0]},
   {t: moment('09-03-2020', date_format), y: [3, 0, 0, 0]},
   {t: moment('10-03-2020', date_format), y: [3, 0, 0, 0]},
  {t: moment('11-03-2020', date_format), y: [3, 0, 0, 0]},
@@ -49,17 +49,18 @@ var data_raw_SL = [ {t: moment('08-03-2020', date_format), y: [3, 0, 0, 0]},
 	{t: moment('19-04-2020', date_format), y: [2456, 75, 91, 0]},
 	{t: moment('20-04-2020', date_format), y: [2948, 85, 101, 0]},
 	{t: moment('21-04-2020', date_format), y: [3382, 87, 110, 0]},
+	{t: moment('22-04-2020', date_format), y: [3772, 92, 120, 0]},
 ];
 
-function getDataSriLanka()
+function getBangladeshData()
 {
   let data = [];
-  for (let i = 0; i < data_raw_SL.length; ++i)
-    data.push({t: data_raw_SL[i].t, y: data_raw_SL[i].y[0]});
+  for (let i = 0; i < data_raw_BD.length; ++i)
+    data.push({t: data_raw_BD[i].t, y: data_raw_BD[i].y[0]});
   return data;
 }
 
-var data_SL = getDataSriLanka();
+var data_BD = getBangladeshData();
 
 //The control parameters will be set to these default values when the user first loads the page.
 var default_controls = {
@@ -73,8 +74,8 @@ var default_controls = {
   diag_frac: 0.14
 }
 
-var sim_params = initializeSimulationParameters(data_SL.length, default_controls.T_pred);
-var data_predicted = getPredictionData(data_SL[0].t);
+var sim_params = initializeSimulationParameters(data_BD.length, default_controls.T_pred);
+var data_predicted = getPredictionData(data_BD[0].t);
 
 var chart = [];
 var chart_config = [];
@@ -282,7 +283,7 @@ function updateChart()
 					label: 'Bangladesh - actual diagnosed',
 					backgroundColor: 'rgba(1,1,1,0)',
 					borderColor: '#3465a4',
-					data: data_SL,
+					data: data_BD,
 					type: 'line',
 					fill: true,
 					borderWidth: 2,
@@ -579,12 +580,12 @@ function updateLegend(day = last_active_tooltip_day)
   document.getElementById("legend_pred_total").innerHTML = formatNumber(data_predicted.aggregated[day].y);
 
   let true_data = ['-', '-', '-', '-'];
-  if (day < data_raw_SL.length)
+  if (day < data_raw_BD.length)
   {
-    true_data[0] = formatNumber(data_raw_SL[day].y[0] - data_raw_SL[day].y[1] - data_raw_SL[day].y[2]);
-    true_data[1] = formatNumber(data_raw_SL[day].y[1]);
-    true_data[2] = formatNumber(data_raw_SL[day].y[2]);
-    true_data[3] = formatNumber(data_raw_SL[day].y[0]);
+    true_data[0] = formatNumber(data_raw_BD[day].y[0] - data_raw_BD[day].y[1] - data_raw_BD[day].y[2]);
+    true_data[1] = formatNumber(data_raw_BD[day].y[1]);
+    true_data[2] = formatNumber(data_raw_BD[day].y[2]);
+    true_data[3] = formatNumber(data_raw_BD[day].y[0]);
   }
   document.getElementById("legend_true_infected").innerHTML = true_data[0];
   document.getElementById("legend_true_recovered").innerHTML = true_data[1];
@@ -598,8 +599,8 @@ function initializeSimulationParameters(hist_length, pred_length)
   let total_length = hist_length + 200;
 
   let q_input = new Array(total_length).fill(0.0);
-  for (let i = 0; i < data_raw_SL.length; ++i)
-    q_input[i] = data_raw_SL[i].y[3];
+  for (let i = 0; i < data_raw_BD.length; ++i)
+    q_input[i] = data_raw_BD[i].y[3];
 
   let params = {
     T_hist: hist_length,
@@ -716,7 +717,7 @@ function updateParameters(force = false)
 
   if (requires_update)
   {
-    data_predicted = getPredictionData(data_SL[0].t);
+    data_predicted = getPredictionData(data_BD[0].t);
     for (let i = 0; i < data_predicted.categorized.length; ++i)
       chart_config.data.datasets[i].data = data_predicted.categorized[i];
 
@@ -885,7 +886,7 @@ function predictModel(params)
 
 function optimizeParameters()
 {
-  let params = initializeSimulationParameters(data_SL.length, 0); //no prediction
+  let params = initializeSimulationParameters(data_BD.length, 0); //no prediction
 
   let res = getFitResidual(params);
   let resnorm = getL2Norm(res);
@@ -988,22 +989,22 @@ function getFitResidual(params)
 
   for (let i = 1; i < sol_hist.length; ++i)
   {
-    let weight0 = (data_raw_SL[i].y[0] == 0) ? 1 : (1/data_raw_SL[i].y[0]);
-    let weight1 = (data_raw_SL[i].y[1] == 0) ? 1 : (1/data_raw_SL[i].y[1]);
-    let weight2 = (data_raw_SL[i].y[2] == 0) ? 1 : (1/data_raw_SL[i].y[2]);
+    let weight0 = (data_raw_BD[i].y[0] == 0) ? 1 : (1/data_raw_BD[i].y[0]);
+    let weight1 = (data_raw_BD[i].y[1] == 0) ? 1 : (1/data_raw_BD[i].y[1]);
+    let weight2 = (data_raw_BD[i].y[2] == 0) ? 1 : (1/data_raw_BD[i].y[2]);
 
     let I_diag = params.diag_frac[i]*sol_hist[i][4] + sol_hist[i][5] + sol_hist[i][6] + sol_hist[i][7];
 
     //I1d + I1q + I2 + I3 = no. of diagnosed patients in hospitals
-    //residual[num_eq*(i-1)] = (I_diag - data_raw_SL[i].y[0]);
-    residual[num_eq*(i-1)] = (I_diag + sol_hist[i][8] - data_raw_SL[i].y[0] - data_raw_SL[i].y[1]);
-    //residual[num_eq*(i-1)] = I_diag + sol_hist[i][8] + sol_hist[i][10] - data_raw_SL[i].y[0] - data_raw_SL[i].y[1] - data_raw_SL[i].y[2];
+    //residual[num_eq*(i-1)] = (I_diag - data_raw_BD[i].y[0]);
+    residual[num_eq*(i-1)] = (I_diag + sol_hist[i][8] - data_raw_BD[i].y[0] - data_raw_BD[i].y[1]);
+    //residual[num_eq*(i-1)] = I_diag + sol_hist[i][8] + sol_hist[i][10] - data_raw_BD[i].y[0] - data_raw_BD[i].y[1] - data_raw_BD[i].y[2];
 
     //Rd = no. of recovered patients
-    //residual[num_eq*(i-1) + 1] = (sol_hist[i][8] - data_raw_SL[i].y[1]) * weight1;
+    //residual[num_eq*(i-1) + 1] = (sol_hist[i][8] - data_raw_BD[i].y[1]) * weight1;
 
     //D = no. of fatalities
-    residual[num_eq*(i-1) + 1] = (sol_hist[i][10] - data_raw_SL[i].y[2]) * 10;
+    residual[num_eq*(i-1) + 1] = (sol_hist[i][10] - data_raw_BD[i].y[2]) * 10;
   }
   return residual;
 }
