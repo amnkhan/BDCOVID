@@ -52,6 +52,7 @@ var data_raw_BD = [ {t: moment('08-03-2020', date_format), y: [3, 0, 0, 0]},
 	{t: moment('22-04-2020', date_format), y: [3772, 92, 120, 0]},
 	{t: moment('23-04-2020', date_format), y: [4186, 108, 127, 0]},
 	{t: moment('24-04-2020', date_format), y: [4689, 112, 131, 0]},
+	{t: moment('25-04-2020', date_format), y: [4998, 112, 140, 0]},
 ];
 
 function getBangladeshData()
